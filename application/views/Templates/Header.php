@@ -73,7 +73,11 @@
                             <p>Pembelian</p>
                         </a>
                     </li>
-
+                    <li <?php if($file == 'logout') {?> class="active" <?php } ?>>
+                            <a class="dropdown-item" href="<? base_url('Login');?>" data-toggle="modal" data-target="#logoutModal">
+                            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>Logout
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -105,7 +109,6 @@
                                     <i class="fa fa-user"></i>
                                     <p class="hidden-lg hidden-md">Notifications</p>
                                 </a>
-                                <ul class="dropdown-menu">
                                     <li>
                                         <a href="<?php echo site_url('login/logout') ?>">Logout</a>
                                     </li>

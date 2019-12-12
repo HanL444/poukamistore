@@ -2,9 +2,8 @@
 $this->session->set_userdata('alamat', 'member');
 $this->load->view('Templates/Header');
 ?>
+
 <!--banner-->	
-
-
 <div class="content">
 	<div class="container-fluid">
 		<div class="row">
@@ -50,7 +49,7 @@ $this->load->view('Templates/Header');
 											<div class="col-sm-8 col-sm-offset-2">
 												<center>
 													<button type="submit" class="btn btn-primary"><?php echo $button; ?></button>
-													<a href="<?php echo site_url('anggota'); ?>" class="btn btn-default">Kembali</a>
+													<a href="<?php echo site_url('member'); ?>" class="btn btn-default">Kembali</a>
 													<input type="reset" class="btn-inverse btn">
 												</center>
 											</div>
@@ -66,12 +65,3 @@ $this->load->view('Templates/Header');
 						<?php
 						$this->load->view('Templates/Footer');
 						?>
-
-
-
-
-
-
-
-
-						

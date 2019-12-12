@@ -26,7 +26,7 @@
             <div class="modal-body">Klik "Logout" dibawah jika anda ingin keluar.</div>
             <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
-            <a class="btn btn-primary" href="autentifikasi/logout">Logout</a>
+            <a class="btn btn-primary" href="Login">Logout</a>
             </div>
         </div>
         </div>

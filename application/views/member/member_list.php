@@ -8,7 +8,7 @@ $this->load->view('Templates/Header');
                     <div class="row">
                         <div class="col-md-12">
                         	<?php if($this->session->userdata('status') == 'admin') { ?>
-                        	<div class="right" align="right" style="margin-top:-50px"><?php echo anchor(site_url("member/tambah"),'<i class="fa fa-plus"></i>', 'class="btn btn-primary"');?></div>	
+                        	<div class="button" align="right" style="margin-top:-50px"><?php echo anchor(site_url("member/tambah"),'<i class="fa fa-plus"></i>', 'class="btn btn-primary"');?></div>	
                         	<?php } ?>
                             <div class="card">
                                 <div class="card-header" data-background-color="purple">
@@ -59,7 +59,7 @@ $this->load->view('Templates/Header');
 		   <?php
 $this->load->view('Templates/Footer');
 ?>
-</script>
+
 </body>
 </html>
 

@@ -1,46 +1,36 @@
 <?php
-/**
- * 
- */
- class Member_Model extends CI_Model
- {
- 	public $nama_table = 'member';
-	public $id = 'id_mem';
- 	public $order = 'ASC';
+defined('BASEPATH') or exit('No direct script access allowed');
 
- 	function __construct()
- 	{
- 		parent::__construct();
- 	}
+class Member_Model extends CI_Model
+{
+    public function simpanData($data = null)
+    {
+        $this->db->insert('user', $data);
+    }
 
- 	//untuk mengambil data seluruh mahasiswa
- 	function Select_Anggota()
- 	{
- 		$data['anggota'] = $this->db->order_by($this->id, $this->order);
- 		return $this->db->get($this->nama_table)->result();
- 	}
+    public function cekData($where = null)
+    {
+        return $this->db->get_where('user', $where);
+    }
 
- 	function ambil_data_id($id)
- 	{
- 		$this->db->where($this->id,$id);
- 		return $this->db->get($this->nama_table)->row();
- 	}
+    public function getUserWhere($where = null)
+    {
+        return $this->db->get_where('user', $where);
+    }
 
- 	function tambah_data($data)
- 	{
- 		return $this->db->insert($this->nama_table, $data);
- 	}
+    public function cekUserAccess($where = null)
+    {
+        $this->db->select('*');
+        $this->db->from('access_menu');
+        $this->db->where($where);
+        return $this->db->get();
+    }
 
- 	function hapus_data($id)
- 	{
- 		$this->db->where($this->id, $id);
- 		$this->db->delete($this->nama_table);
- 	}
-
- 	function edit_data($id,$data)
- 	{
- 		$this->db->where($this->id, $id);
- 		$this->db->update($this->nama_table,$data);
- 	}
- } 
- ?>
+    public function getUserLimit()
+    {
+        $this->db->select('*');
+        $this->db->from('user');
+        $this->db->limit(10, 0);
+        return $this->db->get();
+    }
+}
