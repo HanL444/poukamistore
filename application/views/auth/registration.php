@@ -1,6 +1,6 @@
 <div class="container">
 
-    <div class="card o-hidden border-0 shadow-lg my-5 col-lg-7 mx-auto">
+    <div class="card o-hidden border-0 shadow-lg my-5 col-lg-6 mx-auto">
         <div class="card-body p-0">
             <!-- Nested Row within Card Body -->
             <div class="row">
@@ -35,8 +35,8 @@
                         <div class="text-center">
                             <a class="small" href="<?= base_url('auth/forgotpassword'); ?>">Forgot Password?</a>
                         </div>
-                        <div class="text-center">
-                            <a class="small" href="<?= base_url('auth'); ?>">Already have an account? Login!</a>
+                        <div class="text-center">Already have an account?
+                            <a class="small" href="<?= base_url('auth'); ?>">Login!</a>
                         </div>
                     </div>
                 </div>

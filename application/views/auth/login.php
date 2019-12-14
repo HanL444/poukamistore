@@ -1,41 +1,57 @@
-  <div class="login-wrap">
-    <div class="login-html">
-      <input id="" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
-      <input id="" type="radio" name="tab" class="sign-up" style="display:"><label for="tab-2" class="tab"></label>
-      <div class="login-form">
-        <div class="sign-in-htm">
-          <?php echo validation_errors(); ?>
-          <?php echo form_open('autentifikasi'); ?>
-          <div class="group">
-            <label for="user" class="label">Username</label>
-            <input id="user" name="username" type="text" class="input">
-          </div>
-          <div class="group">
-            <label for="pass" class="label">Password</label>
-            <input id="pass" name="password" type="password" class="input" data-type="password">
-          </div>
-          <div class="custom-control custom-checkbox small">
-            <input type="checkbox" class="custom-control-input" id="customCheck">
-            <label class="custom-control-label" for="customCheck">Remember me</label>
-          </div>
-          <br>
-          <div class="group">
-            <input type="submit" class="button" value="Sign In">
-          </div>
-          <div class="text-center">
-            <a class="small" href="<?= base_url('login/lupaPassword');?>">Lupa Password?</a>
-          </div>
-          <br>
-          <div class="text-center">
-            <a class="small" href="<?= base_url('login/registrasi')?>">Daftar Akun!</a>
-          </div>
-          <div class="hr"></div>
+<div class="container">
+
+    <!-- Outer Row -->
+    <div class="row justify-content-center">
+    
+        <!-- membuat ukuran kolom login large = 6 medium = 8 small = 10 -->
+        <div class="col-lg-6 col-md-8 col-sm-10">
+
+            <div class="card o-hidden border-0 shadow-lg my-5">
+                <div class="card-body p-0">
+                    <!-- Nested Row within Card Body -->
+                    <div class="row">
+                        <div class="col-lg">
+                            <div class="p-5">
+                                <div class="text-center">
+                                    <h1 class="h4 text-gray-900 mb-4">Login Page</h1>
+                                </div>
+
+                                <?= $this->session->flashdata('message'); ?>
+
+                                <form class="user" method="post" action="<?= base_url('auth'); ?>">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control form-control-user" id="email" name="email" placeholder="Enter Email Address..." value="<?= set_value('email'); ?>">
+                                        <?= form_error('email', '<small class="text-danger pl-3">', '</small>'); ?>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control form-control-user" id="password" name="password" placeholder="Password">
+                                        <?= form_error('password', '<small class="text-danger pl-3">', '</small>'); ?>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="custom-control custom-checkbox small">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck">
+                                            <label class="custom-control-label" for="customCheck">Remember Me</label>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btn-user btn-block">
+                                        Login
+                                    </button>
+                                </form>
+                                <hr>
+                                <div class="text-center">
+                                    <a class="small" href="<?= base_url('auth/forgotpassword'); ?>">Forgot Password?</a>
+                                </div>
+                                <div class="text-center">
+                                    <a class="small" href="<?= base_url('auth/registration'); ?>">Create an Account!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
-      </div>
+
     </div>
-  </div>
 
-
-</body>
-
-</html>
+</div> 
