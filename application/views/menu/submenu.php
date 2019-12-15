@@ -42,7 +42,8 @@
                         <td><?= $sm['is_active']; ?></td>
                         <td>
                             <a href="" class="badge badge-success">edit</a>
-                            <a href="" class="badge badge-danger">delete</a>
+                            <a href="<?= base_url('admin/role/') . $sm['id'];?>" onclick="return confirm('are you sure want to delete?');"
+                            class="badge badge-danger"><i class="fas fa-trash"></i> delete</a>
                         </td>
                     </tr>
                     <?php $i++; ?>

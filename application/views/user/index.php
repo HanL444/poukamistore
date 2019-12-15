@@ -1,8 +1,8 @@
 <!-- Begin Page Content -->
-<div class="container-fluid" align="center">
-    <div style="padding: 50px"></div>
+<div class="container-fluid">
 
     <!-- Page Heading -->
+    <center>
     <h1 class="h3 mb-4 text-gray-800"><?= $title; ?></h1>
 
     <div class="row">
@@ -25,7 +25,7 @@
             </div>
         </div>
     </div>
-
+    </center>
 </div>
 <!-- /.container-fluid -->
 

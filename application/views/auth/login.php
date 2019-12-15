@@ -2,8 +2,7 @@
 
     <!-- Outer Row -->
     <div class="row justify-content-center">
-    
-        <!-- membuat ukuran kolom login large = 6 medium = 8 small = 10 -->
+
         <div class="col-lg-6 col-md-8 col-sm-10">
 
             <div class="card o-hidden border-0 shadow-lg my-5">
@@ -27,11 +26,9 @@
                                         <input type="password" class="form-control form-control-user" id="password" name="password" placeholder="Password">
                                         <?= form_error('password', '<small class="text-danger pl-3">', '</small>'); ?>
                                     </div>
-                                    <div class="form-group">
-                                        <div class="custom-control custom-checkbox small">
-                                            <input type="checkbox" class="custom-control-input" id="customCheck">
-                                            <label class="custom-control-label" for="customCheck">Remember Me</label>
-                                        </div>
+                                    <div class="custom-control custom-checkbox small">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck">
+                                        <label class="custom-control-label" for="customCheck">Ingat Saya</label>
                                     </div>
                                     <button type="submit" class="btn btn-primary btn-user btn-block">
                                         Login
